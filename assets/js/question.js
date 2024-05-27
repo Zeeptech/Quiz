@@ -7,7 +7,11 @@ const questions = [
                 values:[
                     {
                         attribute:"honesty",
-                        increase:10
+                        increase:10,
+                    },
+                    {
+                        attribute:"down",
+                        increase:100,
                     }
                 ]
 
