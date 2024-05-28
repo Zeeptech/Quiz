@@ -1,7 +1,7 @@
-const stats = {
+export const stats = {
 };
 
-function addStats(stat,points){
+export function addStats(stat,points){
     if(stats[stat]){
         stats[stat] += points;
     }
