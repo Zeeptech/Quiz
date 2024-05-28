@@ -1,5 +1,6 @@
 import questions from "./question.js";
 import answers from "./answers.js";
+import { stats, addStats } from './stats.js';
  class Quiz {
     
     static quizBoxElement;
@@ -79,11 +80,19 @@ import answers from "./answers.js";
 
     }
     static confirmPage(){
-        Object.keys(answers).forEach((answer) => {
-           // const option = questions[answer].options[answers[answer]];
-            console.log(answer);
-
+        Object.keys(answers.answers).forEach((answer) => {
+            const option = questions[answer].options[answers.answers[answer]];
+            
+            option.values.forEach(option => {
+                addStats(option.attribute, option.increase)
+            })
         }) 
+
+        console.log(stats)
+
+        
+
+
         alert("Congrats, ur retarded");
     }
     static updateNavButtons(){
