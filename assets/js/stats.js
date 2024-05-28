@@ -9,3 +9,4 @@ function addStats(stat,points){
         stats[stat] = points;
     }
 };
+

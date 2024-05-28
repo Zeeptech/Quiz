@@ -32,12 +32,19 @@ import answers from "./answers.js";
         this.optionBoxElement.innerHTML= "";
 
         questions[this.quizBoxIndex].options.forEach((element, index) => {
-
-
+        
             const button = document.createElement("input");
             button.setAttribute("type", "radio");
-            button.setAttribute("name", "options"); // Sätt namn till alternativets titel
             button.setAttribute("id", `option${this.quizBoxIndex}_${index}`);
+            
+
+            if(answers.answers[this.quizBoxIndex] === index){
+                button.setAttribute("checked",true);
+            }
+            else{
+                button.removeAttribute("checked");
+            };
+            
 
             const label = document.createElement("label");
             label.setAttribute("for", `option${this.quizBoxIndex}_${index}`);
@@ -72,6 +79,11 @@ import answers from "./answers.js";
 
     }
     static confirmPage(){
+        Object.keys(answers).forEach((answer) => {
+           // const option = questions[answer].options[answers[answer]];
+            console.log(answer);
+
+        }) 
         alert("Congrats, ur retarded");
     }
     static updateNavButtons(){
@@ -94,4 +106,6 @@ import answers from "./answers.js";
 };
 Quiz.init();
 Quiz.updatePage();
+
+export default Quiz;
 
