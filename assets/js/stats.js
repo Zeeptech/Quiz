@@ -9,17 +9,3 @@ function addStats(stat,points){
         stats[stat] = points;
     }
 };
-
-console.log(stats);
-addStats("Hornyness",100);
-console.log(stats);
-addStats("MicroPenis",100);
-console.log(stats);
-addStats("Hornyness",100);
-console.log(stats);
-addStats("Hornyness",100);
-console.log(stats);
-addStats("Hornyness",100);
-console.log(stats);
-addStats("Hornyness",100);
-console.log(stats);

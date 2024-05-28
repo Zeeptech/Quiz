@@ -32,7 +32,7 @@ const questions = [
         prompt:"Do you like Pizza?",
         options:[
             {
-                title:"Yes",
+                title:"Fuck You",
                 values:[
                     {
                         attribute:"Fat",
@@ -42,10 +42,35 @@ const questions = [
 
             },
             {
-                title:"No",
+                title:"Knulla mig",
                 values:[
                     {
                         attribute:"dishonesty",
+                        increase:10
+                    }
+                ]
+
+            }
+        ]
+    },
+    {
+        prompt:"Sååååå, knulla?",
+        options:[
+            {
+                title:"Usch",
+                values:[
+                    {
+                        attribute:"Gay",
+                        increase:10
+                    }
+                ]
+
+            },
+            {
+                title:"KOM HIT DÅ",
+                values:[
+                    {
+                        attribute:"Gay",
                         increase:10
                     }
                 ]

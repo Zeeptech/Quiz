@@ -1,4 +1,5 @@
 import questions from "./question.js";
+import answers from "./answers.js";
  class Quiz {
     
     static quizBoxElement;
@@ -29,11 +30,32 @@ import questions from "./question.js";
      static updatePage(){
         this.quizBoxElement.innerHTML = questions[this.quizBoxIndex].prompt;
         this.optionBoxElement.innerHTML= "";
-        questions[this.quizBoxIndex].options.forEach(element => {
-            this.optionBoxElement.innerHTML+= element.title
+
+        questions[this.quizBoxIndex].options.forEach((element, index) => {
+
+
+            const button = document.createElement("input");
+            button.setAttribute("type", "radio");
+            button.setAttribute("name", "options"); // Sätt namn till alternativets titel
+            button.setAttribute("id", `option${this.quizBoxIndex}_${index}`);
+
+            const label = document.createElement("label");
+            label.setAttribute("for", `option${this.quizBoxIndex}_${index}`);
+            label.textContent = element.title;
+
+            this.optionBoxElement.appendChild(button);
+            this.optionBoxElement.appendChild(label);
+
+            const buttonText = document.createTextNode(element.title);
+            button.appendChild(buttonText);
+            button.addEventListener("click", ()=> answers.collectAnswer(this.quizBoxIndex,index));
+            this.optionBoxElement.appendChild(button)
+
         });
+
         this.updateNavButtons();
     }
+
     static nextPage(){
 
      if(this.quizBoxIndex < questions.length - 1){
