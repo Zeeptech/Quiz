@@ -1,27 +1,45 @@
 const questions = [
     {
-        prompt:"Do you have Down?",
+        prompt:"Your friends needs you in battle, what do you do?",
         options:[
             {
-                title:"Yes",
+                title:"I rush",
                 values:[
                     {
-                        attribute:"honesty",
-                        increase:10,
+                        attribute:"aggressive",
+                        increase:70
                     },
                     {
-                        attribute:"down",
-                        increase:100,
+                        attribute:"friendly",
+                        increase:-20
                     }
                 ]
 
             },
             {
-                title:"No",
+                title:"I stand behind",
                 values:[
                     {
-                        attribute:"dishonesty",
-                        increase:10
+                        attribute:"divinity",
+                        increase:100
+                    },
+                    {
+                        attribute:"friendly",
+                        increase:25
+                    }
+                ]
+
+            },
+            {
+                title:"I snipe",
+                values:[
+                    {
+                        attribute:"agillity",
+                        increase:100
+                    },
+                    {
+                        attribute:"friendly",
+                        increase:25
                     }
                 ]
 
@@ -29,24 +47,24 @@ const questions = [
         ]
     },
     {
-        prompt:"Do you like Pizza?",
+        prompt:"Do you like pineapple on pizza?",
         options:[
             {
                 title:"Fuck You",
                 values:[
                     {
-                        attribute:"Fat",
-                        increase:10
+                        attribute:"down",
+                        increase:1000
                     }
                 ]
 
             },
             {
-                title:"Knulla mig",
+                title:"Fuck Me",
                 values:[
                     {
-                        attribute:"dishonesty",
-                        increase:10
+                        attribute:"down",
+                        increase:100
                     }
                 ]
 
@@ -54,24 +72,28 @@ const questions = [
         ]
     },
     {
-        prompt:"Sååååå, knulla?",
+        prompt:"You walk down an unlit alley, are you afraid?",
         options:[
             {
-                title:"Usch",
+                title:"Pfft, i can handle myself!",
                 values:[
                     {
-                        attribute:"Gay",
-                        increase:10
+                        attribute:"agressive",
+                        increase:25
                     }
                 ]
 
             },
             {
-                title:"KOM HIT DÅ",
+                title:"Im not afraid, i just choose to go another way",
                 values:[
                     {
-                        attribute:"Gay",
-                        increase:10
+                        attribute:"honesty",
+                        increase:45
+                    },
+                    {
+                        attribute:"cunning",
+                        increase:45
                     }
                 ]
 
